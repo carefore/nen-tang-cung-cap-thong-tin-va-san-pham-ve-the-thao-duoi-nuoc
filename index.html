@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Thể Thao Dưới Nước</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#submitBtn").click(function(){
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var sport = $("#sport").val();
+                
+                $.ajax({
+                    url: 'save_data.php',
+                    method: 'POST',
+                    data: {
+                        name: name,
+                        email: email,
+                        sport: sport
+                    },
+                    success: function(response){
+                        alert('Dữ liệu đã được lưu vào cơ sở dữ liệu!');
+                        // Có thể thực hiện các hành động khác sau khi lưu dữ liệu thành công
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="sportForm">
+        <label for="name">Họ và tên:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="sport">Thể thao yêu thích:</label><br>
+        <input type="text" id="sport" name="sport"><br><br>
+        <input type="button" value="Submit" id="submitBtn">
+    </form>
+</body>
+</html>
