@@ -1,5 +1,4 @@
 
-```markdown
 # Thể Thao Dưới Nước - Website Liên Hệ
 
 Đây là một dự án đơn giản để lưu trữ thông tin người dùng và sản phẩm về thể thao dưới nước.
